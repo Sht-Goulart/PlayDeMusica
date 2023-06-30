@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import Welcome from '../pages/Welcome'
-import Pesquisa from '../pages/Pesquisa';
+import Pesquisa from '../pages/Pesquisa'
 
 
 const Stack = createNativeStackNavigator()
