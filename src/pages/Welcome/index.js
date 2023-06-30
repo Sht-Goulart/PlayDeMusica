@@ -1,4 +1,5 @@
 import React from 'react';
+import LinearGradients from "reac-native-linear-gradients";
 import {
   SafeAreaView,
   StyleSheet,
@@ -12,23 +13,17 @@ import {
 export default function Welcome(){
     return(
         <SafeAreaView style={styles.container}>
-      <View style={styles.container}>
-        <Text style={styles.titleStyle}>
-          Botão Flutuante
-        </Text>
-        <TouchableOpacity
-          activeOpacity={0.7}
-          style={styles.touchableOpacityStyle}>
-          <Image
-            source={{
-              uri:
-                'https://developerplus.com.br/wp-content/uploads/2021/12/plus_icon.png',
-            }}
-            style={styles.floatingButtonStyle}
-          />
-        </TouchableOpacity>
-      </View>
-    </SafeAreaView>
+            <View style={styles.container}>
+                <Text style={styles.titleStyle}>
+                Botão Flutuante
+                </Text>
+                <View
+                activeOpacity={0.7}
+                style={styles.touchableOpacityStyle}>
+                <View style={styles.floatingButtonStyle}/>
+                </View>
+            </View>
+        </SafeAreaView>
   );
 };
 
@@ -36,7 +31,7 @@ export default function Welcome(){
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: 'white',
+      backgroundColor: '#219EBC',
       padding: 10,
       alignItems: 'center',
       justifyContent: 'center',
@@ -54,16 +49,19 @@ const styles = StyleSheet.create({
     },
     touchableOpacityStyle: {
       position: 'absolute',
-      width: 50,
-      height: 50,
+      width: 20,
+      height: 100,
       alignItems: 'center',
       justifyContent: 'center',
-      right: 30,
+      right: 115,
       bottom: 30,
     },
     floatingButtonStyle: {
+      opacity: 0.25,
+      borderRadius: 10,
+      backgroundColor: '#1A0D6A',
       resizeMode: 'contain',
-      width: 70,
-      height: 70,
+      width: 250,
+      height: 50,
     },
   });
